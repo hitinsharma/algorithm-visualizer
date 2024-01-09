@@ -1,405 +1,94 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-  <style>
-        /* Style for the dropdown menu */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        /* Style for the dropdown button */
-        .dropdown button {
-			background: var(--bg-primary);
-			color: var(--text-color);
-			font-family: "Raleway", sans-serif;
-            color: #222222;
-            padding: 10px;
-            
-			 margin: 0 1rem;
-  font-size: 0.8rem;
-  font-weight: var(--weight-semibold);
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Style for the dropdown content (hidden by default) */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-
-        /* Style for the links inside the dropdown */
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-        }
-
-        /* Change color on hover */
-        .dropdown-content a:hover {
-            background-color: #f1f1f1;
-        }
-
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-    </style>
+    <title>Algorithm Visualizer</title>
+    <link rel="stylesheet" href="css/styles.css" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    
+    
     <!-- Primary Meta Tags -->
-    <title>Hitin's - Personal Portfolio</title>
-    <meta name="title" content="Hitin's Portfolio" />
+    <title>Algorithm Visualizer</title>
+    <meta name="title" content="Project-1" />
     <meta
       name="description"
-      content="Explore my diverse portfolio showcasing a passion for web development, unique projects, and a commitment to delivering innovative solutions."
+      content="This project is an interactive platform designed to make complex algorithms accessible and understandable through visual representations. Users can explore various sorting and pathfinding algorithms, gaining insights into their inner workings in real-time."
     />
-    
-    <meta name="title" property="og:title" content="Enter your title here">
-    <meta property="og:type" content="Enter any tyoe like Article or Website">
-    <meta name="description" property="og:description" content="Enter description here">
-    <meta name="image" property="og:image" content="Enter image URL here">
-    <meta property='og:url' content='https://www.hitin.tech/project1/index.html'/>
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
     <meta
       property="og:url"
-      content="https://www.hitin.tech/"
+      content="https://hitin.tech/project1/index.html"
     />
-    <meta property="og:title" content="Hitin's Portfolio" />
+    <meta property="og:title" content="Algorithm Visualizer" />
     <meta
       property="og:description"
-      content="Explore my diverse portfolio showcasing a passion for web development, unique projects, and a commitment to delivering innovative solutions."
+      content="This project is an interactive platform designed to make complex algorithms accessible and understandable through visual representations. Users can explore various sorting and pathfinding algorithms, gaining insights into their inner workings in real-time."
     />
     <meta
       property="og:image"
-      content="https://www.hitin.tech/assets/link-image.png"
+      content="https://www.hitin.tech/project1/images/link-image.png"
     />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta
       property="twitter:url"
-      content="https://www.hitin.tech/"
+      content="https://hitin.tech/project1/index.html"
     />
-    <meta property="twitter:title" content="Hitin's Portfolio" />
+    <meta property="twitter:title" content="Algorithm Visualizer" />
     <meta
       property="twitter:description"
-      content="Explore my diverse portfolio showcasing a passion for web development, unique projects, and a commitment to delivering innovative solutions."
+      content="This project is an interactive platform designed to make complex algorithms accessible and understandable through visual representations. Users can explore various sorting and pathfinding algorithms, gaining insights into their inner workings in real-time."
     />
     <meta
       property="twitter:image"
-      content="https://www.hitin.tech/assets/link-image.png"
+      content="https://www.hitin.tech/project1/images/link-image.png"
     />
-
-    <!-- Link -->
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="assets/favicon/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="/assets/favicon/favicon-16x16.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="assets/favicon/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="192x192"
-      href="assets/favicon/android-chrome-192x192.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="512x512"
-      href="assets/favicon/android-chrome-512x512.png"
-    />
-    <link rel="icon" type="image/x-icon" href="assets/favicon/favicon.ico" />
-    <link rel="manifest" href="assets/favicon/site.webmanifest" />
-    <link
-      rel="stylesheet"
-      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
-      integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/utilities.css" />
+    
   </head>
   <body>
-    <header id="hero">
-      <!-- Navbar -->
-      <nav class="navbar">
-        <div class="container">
-          <!-- Logo -->
-          <h1 id="logo">
-            <a href="index.html"
-              ><img src="./assets/logo1.png" alt="Your Logo"
-            /></a>
-          </h1>
-          <!-- Navbar links -->
-          <ul class="nav-menu">
-		  <li><a class="nav-link" href="#">HOME</a></li>
-            <li><a class="nav-link" href="#projects">ACHIEVEMENTS</a></li>
-			<li><a class="nav-link" href="#portfolio">PORTFOLIO</a></li>
-            
-            <li>
-						                         <div class="dropdown">
-                           <!-- Dropdown button -->
-									<button>PROJECTS ▼</button>
-    
-								<!-- Dropdown content -->
-								<div class="dropdown-content">
-							<!-- Links to different pages -->
-								<a href="project1/index.html" TARGET="_blank">Algorithm Visualizer</a>
-								<a href="project2/index.html" TARGET="_blank">भोजन वितरण - Food Waste Management System</a>
-								<a href="index.html" TARGET="_blank">Personal Portfolio</a>
-							</div>
-									</div>
-
-						</li>
-            <li>
-              <a
-                class="nav-link btn btn-primary"
-                href="profile.pdf" target="_blank"
-                >RESUME <i class="fas fa-arrow-right"></i
-              ></a>
-            </li>
-
-            <!-- Toggle switch -->
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" />
-                <img class="sun" src="assets/sun.svg" />
-              </label>
-            </div>
-            <!-- Hamburger menu -->
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
-        </div>
-      </nav>
-
-      <section class="header-container">
-        <img
-          class="profile-image"
-          src="assets/intro-image.jpg"
-          alt=""
-        />
-        <h1>Hi I'm Hitin</h1>
-
-        <div class="content-text">
-          <h2>Front-End</h2>
-          <h2>Web Developer</h2>
-
-          <p>
-        I am a Undergrad and currently pursuing B.Tech in Computer Science & Engineering (CSE). I have a passion for computer 
-		programming and information technology. I have used computer programming since I was in high school. This passion has given me
-		the ability to develop programs for a multitude of things, including softwares, websites, games and databases. My other love is
-		information technology. I have many plans to implement newer technologies in my life such as cloud computing and managed IT 
-		services.
-        I am open to learning new things and getting involved with new projects that can help me learn or apply all that I have learned throughout my college career.
-          </p>
-        </div>
-        <a
-          href="https://www.linkedin.com/in/hitin-sharma-431a8723b/"
-          class="btn btn-secondary"
-          target="_blank"
-          >Connect With Me</a
-        >
-      </section>
-    </header>
-
-    <!-- Projects -->
-    <section id="projects" class="project-container container">
-      <div class="division"></div>
-      <div class="content-text">
-        <h2>Achievements</h2>
-        <p>Check out my academic, extracurricular, and personal accomplishments</p>
+    <div id="main">
+      <div id="header">
+        <a href="https://www.hitin.tech/project1/index.html"><div id="title">Algorithm Visualizer</div></a>
       </div>
-
-      <article class="project">
-        <!-- Project 1 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>🏆 Secured 1st Position in Website Building Competition</h3>
-              <p>March , 2023</p>
+      <div id="container">
+        <div class="algo-container">
+          <a href="algos/trie/index.html" class="category_link">
+            <div class="imageContainer">
+              <img src="assets/trie.png" class="image" />
             </div>
-
-            <div class="project-link">
-           
-            </div>
-          </div>
+            <div>Trie</div>
+          </a>
         </div>
-
-        <!-- Project 2 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>🏆 Secured 1st Position in Tech Quiz Competition</h3>
-              <p>March , 2023</p>
+        <div class="algo-container">
+          <a href="algos/bst/index.html" class="category_link">
+            <div class="imageContainer">
+              <img src="assets/bst.png" class="image" />
             </div>
-
-            <div class="project-link">
-            
-            </div>
-          </div>
+            <div>Binary Search Tree</div>
+          </a>
         </div>
-
-        <!-- Porject 3 -->
-        <div href="" class="card">
-          <div class="project-info">
-            <div class="project-bio">
-              <h3>🏆 Secured 3rd Position in Call of Duty</h3>
-              <p>March , 2023</p>
+        <div class="algo-container">
+          <a href="algos/path_finding/index.html" class="category_link">
+            <div class="imageContainer">
+              <img src="assets/path_finding.png" class="image" />
             </div>
-
-            <div class="project-link">
-              
-            </div>
-          </div>
+            <div>Path Finding Visualizer</div>
+          </a>
         </div>
-
-       
-      </article>
-	  <!-- Projects -->
-    <section id="portfolio" class="portfolio-container container">
-      <div class="division"></div>
-      <div class="content-text">
-        <h2>Portfolio</h2>
-        <p>Check out my academic, extracurricular, and personal accomplishments</p>
+        <div class="algo-container">
+          <a href="algos/sorting/index.html" class="category_link">
+            <div class="imageContainer">
+              <img src="assets/sorting.png" class="image" />
+            </div>
+            <div>Sorting Visualizer</div>
+          </a>
+        </div>
       </div>
-
-      <article class="portfolio">
-        <!-- Project 1 -->
-        <div href="" class="card2">
-          <div class="portfolio-info">
-            <div class="portfolio-bio">
-              <h3>College Friends</h3>
-              <p>📍Galgotias University</p>
-            </div>
-
-            <div class="portfolio-link">
-           
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div href="" class="card2">
-          <div class="portfolio-info">
-            <div class="portfolio-bio">
-              <h3>TechFest </h3>
-              <p>📍NIET</p>
-            </div>
-
-            <div class="portfolio-link">
-            
-            </div>
-          </div>
-        </div>
-
-        <!-- Porject 3 -->
-        <div href="" class="card2">
-          <div class="portfolio-info">
-            <div class="portfolio-bio">
-              <h3>Random</h3>
-              <p>📍Galgotias College Playground</p>
-            </div>
-
-            <div class="portfolio-link">
-              
-            </div>
-          </div>
-        </div>
-		<!-- Porject 4 -->
-        <div href="" class="card2">
-          <div class="portfolio-info">
-            <div class="portfolio-bio">
-              <h3>Engineer's Day 2023</h3>
-              <p>📍NIET</p>
-            </div>
-
-            <div class="portfolio-link">
-              
-            </div>
-          </div>
-        </div>
-		<!-- Porject 5 -->
-        <div href="" class="card2">
-          <div class="portfolio-info">
-            <div class="portfolio-bio">
-              <h3>High Scholl Farewell</h3>
-              <p>📍Nirmala Convent School</p>
-            </div>
-
-            <div class="portfolio-link">
-              
-            </div>
-          </div>
-        </div>
-		<!-- Porject 6 -->
-        <div href="" class="card2">
-          <div class="portfolio-info">
-            <div class="portfolio-bio">
-              <h3>Cyber Sapiens </h3>
-              <p>📍NIET</p>
-            </div>
-
-            <div class="portfolio-link">
-              
-            </div>
-          </div>
-        </div>
-
-       
-      </article>
-
-      <a href="https://www.instagram.com/iamhitinsharma" class="btn btn-secondary"
-        target="_blank" >See More <i class="fas fa-arrow-right"></i
-      ></a>
-    </section>
-
-    <footer id="footer">
-      <div class="container">
-        <a href="mailto:hitinsharma@yahoo.com">hitinsharma@yahoo.com</a>
-        <!-- Social links -->
-        <div class="social">
-          <a href="https://www.facebook.com/hitin.sharma.33/" target="_blank"
-            ><img src="./assets/facebook-icon.svg" alt="Facebook"
-          /></a>
-          <a href="https://twitter.com/HitinSharma7" target="_blank"><img src="./assets/twitter-icon.svg" alt="Twitter" /></a>
-          <a href="https://www.linkedin.com/in/hitin-sharma-431a8723b/" target="_blank"
-            ><img src="./assets/linkedin-icon.svg" alt="Linkedin"/></a>
-          <a href="https://github.com/hitinsharma" target="_blank"><img src="./assets/github-icon.svg" alt="GitHub" /></a>
-          <a href="https://www.youtube.com/channel/UCHW_a3tiNE1DMYt32oHubUw" target="_blank"
-            >
-         <i class="fab fa-youtube"></i></a>
-        </div>
-  
-        <p>Copyright &copy; hitin.tech <span id="datee"></span>, All rights reserved</p>
-      </div>
-    </footer>
-    <script src="js/script.js"></script>
+    </div>
   </body>
 </html>
